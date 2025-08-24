@@ -1,0 +1,10 @@
+[package]
+name = "rust-setup-demo"
+version = "0.1.0"
+edition = "2021"
+description = "Rust development environment setup demo project"
+authors = ["Rust Bootcamp"]
+license = "MIT"
+
+[dependencies]
+rand = "0.8"

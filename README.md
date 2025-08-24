@@ -53,11 +53,85 @@ Assignment: [Enable GitHub Copilot](./lab.md#Assignment-2-Enable-GitHub-Copilot)
 
 Use the [included lab](./lab.md) for this week to apply the concepts you've learned. The [lab](./lab.md) lab has 3 parts that are all relevant for what you've learned this week.
 
+## Getting Started
+
+This repository includes a sample Rust project to help you test your development environment setup. Follow these steps to build and run the demo:
+
+### Prerequisites
+- Rust installed via [Rustup](https://rustup.rs/)
+- Visual Studio Code with Rust Analyzer extension (optional but recommended)
+
+### Building and Running the Demo
+
+1. **Clone or open this repository** in your development environment
+2. **Build the project:**
+   ```bash
+   cargo build
+   ```
+3. **Run the demo:**
+   ```bash
+   cargo run
+   ```
+
+You should see output similar to:
+```
+Hello from the Rust development environment!
+Today's weather forecast: sunny
+This demo shows that your Rust environment is working correctly! 🦀
+```
+
+### Project Structure
+```
+rust-workspace-test/
+├── src/
+│   └── main.rs          # Main Rust source file with weather demo
+├── .devcontainer/       # GitHub Codespaces configuration
+│   └── devcontainer.json
+├── Cargo.toml          # Rust project configuration and dependencies
+├── README.md           # This file
+└── lab.md             # Week 1 assignments
+```
+
 ## Resources
 
 - [Rust Book](https://doc.rust-lang.org/book/)
 - [First steps with Rust Learning Path](https://learn.microsoft.com/training/paths/rust-first-steps/?WT.mc_id=academic-0000-alfredodeza)
 - [DevOps command-line tools in Python and Rust](https://learning.oreilly.com/videos/devops-command-line-tools/28037639VIDEOPAIML/)
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+#### Rust Not Found
+If you get an error like `cargo: command not found` or `rustc: command not found`:
+1. Make sure Rust is installed: Visit [rustup.rs](https://rustup.rs/) and follow the installation instructions
+2. Restart your terminal/command prompt after installation
+3. Verify installation: `rustc --version` and `cargo --version`
+
+#### Build Errors
+If `cargo build` fails:
+1. Check your internet connection (Cargo needs to download dependencies)
+2. Make sure you're in the project root directory (where `Cargo.toml` is located)
+3. Try `cargo clean` followed by `cargo build`
+
+#### Visual Studio Code Issues
+If Rust Analyzer isn't working:
+1. Make sure the [Rust Analyzer extension](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) is installed
+2. Open the project folder (not individual files) in VS Code
+3. Wait for Rust Analyzer to index the project (check the status bar)
+4. Try reloading VS Code: `Ctrl+Shift+P` → "Developer: Reload Window"
+
+#### Codespaces Issues
+If Codespaces isn't working properly:
+1. Make sure you have access to GitHub Codespaces
+2. Try creating a new Codespace from the repository
+3. Check that all extensions are properly installed in the Codespace
+
+#### Permission Errors
+On Unix-like systems (Linux/macOS), if you get permission errors:
+1. Don't use `sudo` with Rust/Cargo commands
+2. Make sure your user has write permissions to the project directory
+3. Check that Rust was installed for your user (not system-wide with sudo)
 
 **Coursera Courses**
 

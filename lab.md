@@ -20,7 +20,12 @@ In this assignment, you'll enable GitHub Copilot for your GitHub account. You'll
 2. Install the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-0000-alfredodeza) extension for Visual Studio Code.
 
 ### Artifacts
-For this assignment, you'll have a GitHub repository with a single `main.rs` file that you'll create with a single function produced with the help of GitHub Copilot. Additionally, you'll include a `README.md` that describes the function and at least one aspect of Copilot that you found interesting.
+For this assignment, you'll have a GitHub repository with a Rust project containing:
+1. A `src/main.rs` file with a function created with GitHub Copilot's help
+2. A `Cargo.toml` file defining the project configuration and dependencies
+3. A `README.md` file that describes the function and at least one aspect of Copilot that you found interesting
+
+You can use the weather forecast demo in this repository as a starting point, or create your own project from scratch.
 
 ## Assignment 3: Configure Visual Studio Code with Codespaces
 This is the last assignment for this week. In this assignment, you'll configure [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-0000-alfredodeza) with [Codespaces](https://docs.github.com/en/codespaces/overview). 
