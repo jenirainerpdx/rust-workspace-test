@@ -1,7 +1,7 @@
 [package]
 name = "rust-workspace-test"
 version = "0.0.1"
-edition = "2025"
+edition = "2024"
 description = "Rust development environment setup demo project"
 authors = ["Rust Bootcamp, Jeni Rainer"]
 license = "MIT"
