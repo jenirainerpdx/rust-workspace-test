@@ -1,18 +1,26 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/rust
 {
-	"name": "Rust",
+	"name": "Rust Development Environment",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/rust:0-1-bullseye",
+	
+	// Configure VS Code extensions and settings
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"rust-lang.rust-analyzer",
-				"vadimcn.vscode-lldb",
-				"GitHub.copilot"
-			]
+				"rust-lang.rust-analyzer",    // Rust language support
+				"vadimcn.vscode-lldb",         // Debugging support
+				"GitHub.copilot"               // AI pair programming
+			],
+			"settings": {
+				"rust-analyzer.checkOnSave.command": "clippy"
+			}
 		}
-	}
+	},
+
+	// Use 'postCreateCommand' to run commands after the container is created
+	"postCreateCommand": "rustc --version && cargo --version"
 
 	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
 	// "mounts": [
@@ -28,9 +36,6 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "rustc --version",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
