@@ -1,5 +1,3 @@
-# [![Coursera Course](./assets/banner.svg)](https://ds500.paiml.com/bootcamps/rust/ "Join the Bootcamp")
-
 # Rust development environment setup
 
 _Rust Bootcamp week 1: Setting up your development environment_

@@ -8,9 +8,9 @@ This repository provides a complete Rust development environment setup for Week 
 
 ### Core Components
 - **Rust Project Structure**: A properly configured Rust project with `Cargo.toml` and source code
-- **Sample Application**: A weather forecast demo that demonstrates basic Rust concepts
+- **Sample Application**: A weather forecast demo that demonstrates basic Rust concepts (not really a forecast; randomly pulling from an enum)
 - **Development Environment**: Pre-configured setup for Visual Studio Code and GitHub Codespaces
-- **Learning Materials**: Comprehensive lessons and hands-on assignments
+
 
 ### Development Tools Setup
 - **Rust Toolchain**: rustc, cargo, and related tools
@@ -22,7 +22,7 @@ This repository provides a complete Rust development environment setup for Week 
 
 ## Quick Start Guide
 
-### Option 1: Using GitHub Codespaces (Recommended for Beginners)
+### Option 1: Using GitHub Codespaces
 1. Click the "Code" button on the GitHub repository page
 2. Select "Codespaces" tab
 3. Click "Create codespace on main"
@@ -36,7 +36,8 @@ This repository provides a complete Rust development environment setup for Week 
 1. **Install Prerequisites**:
    - Install Rust: `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
    - Install Visual Studio Code
-   - Install recommended extensions
+   - Install recommended extensions, primarily rust-analyzer
+
 
 2. **Clone and Run**:
    ```bash
@@ -48,21 +49,8 @@ This repository provides a complete Rust development environment setup for Week 
 ## Understanding the Code
 
 The sample application (`src/main.rs`) demonstrates:
-
-```rust
-use rand::thread_rng;           // Importing external crate
-use rand::seq::SliceRandom;
-
-fn main() {                     // Entry point
-    let forecasts = [...];      // Array declaration
-    let mut rng = thread_rng(); // Mutable variable
-    let forecast = forecasts    // Method chaining
-        .choose(&mut rng)       // Random selection
-        .unwrap();              // Error handling
-    
-    println!("Today's weather forecast: {}", forecast); // String formatting
-}
-```
+- simple use of println for hello world type app
+- use of rand::seq::SliceRandom to do a Random selection.
 
 ### Key Concepts Covered
 - **External Dependencies**: Using the `rand` crate for random number generation
@@ -93,33 +81,3 @@ cargo clippy       # Linting and suggestions
 cargo fmt          # Code formatting
 cargo test         # Run tests (when tests exist)
 ```
-
-## Assignment Completion
-
-This repository supports three main assignments:
-
-1. **Assignment 1**: Basic Rust and VS Code setup
-   - Verify by running `cargo run` successfully
-   
-2. **Assignment 2**: GitHub Copilot integration
-   - Use Copilot to modify or extend the sample code
-   - Document your experience in a README
-
-3. **Assignment 3**: Codespaces configuration
-   - This repository is already Codespaces-ready
-   - Test by creating a new Codespace and running the demo
-
-## Next Steps
-
-After completing this week:
-- Explore the [Rust Book](https://doc.rust-lang.org/book/) for deeper learning
-- Try modifying the weather app to add new features
-- Continue to Week 2 of the Rust Bootcamp
-- Practice with more complex Rust projects
-
-## Resources for Further Learning
-
-- [Rust by Example](https://doc.rust-lang.org/rust-by-example/)
-- [Rust Standard Library Documentation](https://doc.rust-lang.org/std/)
-- [Cargo Book](https://doc.rust-lang.org/cargo/)
-- [Rust Programming Language (Video Course)](https://ds500.paiml.com/learn/course/g6u1k/)

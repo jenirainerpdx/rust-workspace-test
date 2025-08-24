@@ -1,9 +1,9 @@
 [package]
-name = "rust-setup-demo"
-version = "0.1.0"
-edition = "2021"
+name = "rust-workspace-test"
+version = "0.0.1"
+edition = "2025"
 description = "Rust development environment setup demo project"
-authors = ["Rust Bootcamp"]
+authors = ["Rust Bootcamp, Jeni Rainer"]
 license = "MIT"
 
 [dependencies]
